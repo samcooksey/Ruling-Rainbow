@@ -46,9 +46,13 @@ var optionName = document.querySelector("#optionName");
 var optionList = document.querySelector("#optionList");
 var chooseButton = document.querySelector("#choose");
 var resultHolder = document.querySelector("#result");
+var saveButton = document.querySelector("#save");
+var loadButton = document.querySelector("#load");
 var result = document.createElement("div");
+
 var weightCounter = 0;
 var activeWeightCounters = [];
+
 
 
 chooseButton.addEventListener("click", function(){
@@ -66,10 +70,6 @@ chooseButton.addEventListener("click", function(){
 
     result.innerHTML = chosenOption;
     resultHolder.appendChild(result);
-    console.log(options);
-    console.log(activeWeightCounters);
-    console.log("data " + data);
-    console.log("chosen option " + chosenOption);
   });
 });
 var submit = function(){
@@ -93,6 +93,24 @@ optionName.addEventListener("keyup", function(){
 
   }
 });
+
+saveButton.addEventListener("click", function(){
+  localStorage.options = JSON.stringify(options);
+  localStorage.activeWeightCounters = JSON.stringify(activeWeightCounters);
+  localStorage.weightCounter = JSON.stringify(weightCounter);
+});
+loadButton.addEventListener("click", function(){
+  activeWeightCounters = JSON.parse(localStorage.activeWeightCounters);
+  weightCounter = JSON.parse(localStorage.weightCounter);
+  options = JSON.parse(localStorage.options);
+  console.log(options);
+  for (var key in options){
+    var option = document.createElement("div");
+    option.innerHTML = key;
+    optionList.appendChild(option);
+  }
+});
+
 //
 // List of functions:
 //
