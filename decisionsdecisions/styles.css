@@ -1,0 +1,13 @@
+
+#optionList {
+
+  display: inline-block;
+}
+#result{
+  display: inline-block;
+  background-color: pink;
+  font-size: 50px;
+}
+#inputs{
+  display: block;
+}
