@@ -1,13 +1,42 @@
 
+div{
+  font-size: 100px;
+}
 #optionList {
 
   display: inline-block;
 }
 #result{
-  display: inline-block;
-  background-color: pink;
-  font-size: 50px;
 }
 #inputs{
   display: block;
+}
+.title{
+  font-size: 1em;
+}
+.header{
+  border: 1px solid black;
+}
+.header div{
+    font-size: .15em;
+}
+#selectedOption{
+  box-sizing: border-box;
+  border: 2px solid black;
+  padding: 0;
+  padding-bottom: 100%;
+}
+#selectedOption img{
+  position: absolute;
+  width: 100%
+}
+#answer{
+  position: absolute;
+}
+.optionSpace{
+  padding-bottom: 100%;
+}
+.optionSpace div{
+  position: absolute;
+  font-size: .5em;
 }

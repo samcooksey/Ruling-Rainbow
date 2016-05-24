@@ -4,18 +4,129 @@
     <meta charset="utf-8">
     <title>Decisions Decisions</title>
     <link rel = "stylesheet" type = "text/css" href = "styles.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   </head>
   <body>
-    <div id = "inputs">
-    <label>Option Name</label>
-    <input type = "text" id = "optionName"/>
-    <button id = "submitOption">Submit</button>
-    <button id = "choose">choose your option!</button>
-    <button id = "save">Save options</button>
-    <button id = "load">Load Options</button>
+    <div class = "container-fluid">
+      <div class = "row">
+        <div class = "col-md-offset-2 col-md-10 title">Decisions</div>
+      </div>
+      <div class = "row">
+        <div class = "col-md-offset-5 col-md-7 title">Decisions</div>
+      </div>
+      <div class = "row header">
+        <div class = "col-md-2" id = "save">Save Current Option Set</div>
+        <div class = "col-md-2" id = "load">Load Previous Option Set</div>
+        <div class = "col-md-2"><input type = "text" id = "optionName"/></div>
+        <div class = "col-md-2" id = "submitOption">Submit Option</div>
+        <div class = "col-md-2"></div>
+        <div class = "col-md-2"></div>
+      </div>
+      <div class = "row">
+        <div class ="col-md-2" id = "column-0">
+          <div class = "row">
+            <div class = "col-md-12 optionSpace" id = "space0"></div>
+          </div>
+          <div class = "row">
+            <div class = "col-md-12 optionSpace" id = "space4"></div>
+          </div>
+        </div>
+        <div class ="col-md-2" id = "column-1">
+          <div class = "row">
+            <div class = "col-md-12 optionSpace" id = "space1"></div>
+          </div>
+          <div class = "row">
+            <div class = "col-md-12 optionSpace" id = "space5"></div>
+          </div>
+        </div>
+        <div class ="col-md-4" id = "column-2and3">
+          <div class = "row">
+            <div class = "col-md-12" id = "selectedOption"><img id = "answerImg"/><div id = "answer">CLICK ME TO DECIDE!</div></div>
+          </div>
+        </div>
+        <div class ="col-md-2" id = "column-4">
+          <div class = "row">
+            <div class = "col-md-12 optionSpace" id = "space2"></div>
+          </div>
+          <div class = "row">
+            <div class = "col-md-12 optionSpace" id = "space6"></div>
+          </div>
+        </div>
+        <div class ="col-md-2" id = "column-5">
+          <div class = "row">
+            <div class = "col-md-12 optionSpace" id = "space3"></div>
+          </div>
+          <div class = "row">
+            <div class = "col-md-12 optionSpace" id = "space7"></div>
+          </div>
+        </div>
+      </div>
+      <div class = "row">
+        <div class = "col-md-2">
+          <div class = "row">
+            <div class = "col-md-12 optionSpace" id = "space8"></div>
+          </div>
+        </div>
+        <div class = "col-md-2">
+          <div class = "row">
+            <div class = "col-md-12 optionSpace" id = "space9"></div>
+          </div>
+        </div>
+        <div class = "col-md-2">
+          <div class = "row">
+            <div class = "col-md-12 optionSpace" id = "space10"></div>
+          </div>
+        </div>
+        <div class = "col-md-2">
+          <div class = "row">
+            <div class = "col-md-12 optionSpace" id = "space11"></div>
+          </div>
+        </div>
+        <div class = "col-md-2">
+          <div class = "row">
+            <div class = "col-md-12 optionSpace" id = "space12"></div>
+          </div>
+        </div>
+        <div class = "col-md-2">
+          <div class = "row">
+            <div class = "col-md-12 optionSpace" id = "space13"></div>
+          </div>
+        </div>
+      </div>
+      <div class = "row">
+        <div class = "col-md-2">
+          <div class = "row">
+            <div class = "col-md-12 optionSpace" id = "space14"></div>
+          </div>
+        </div>
+        <div class = "col-md-2">
+          <div class = "row">
+            <div class = "col-md-12 optionSpace" id = "space15"></div>
+          </div>
+        </div>
+        <div class = "col-md-2">
+          <div class = "row">
+            <div class = "col-md-12 optionSpace" id = "space16"></div>
+          </div>
+        </div>
+        <div class = "col-md-2">
+          <div class = "row">
+            <div class = "col-md-12 optionSpace" id = "space17"></div>
+          </div>
+        </div>
+        <div class = "col-md-2">
+          <div class = "row">
+            <div class = "col-md-12 optionSpace" id = "space18"></div>
+          </div>
+        </div>
+        <div class = "col-md-2">
+          <div class = "row">
+            <div class = "col-md-12 optionSpace" id = "space19"></div>
+          </div>
+        </div>
+      </div>
+
   </div>
-    <div id = "optionList"></div>
-    <div id = "result"></div>
     <script type = "text/javascript" src = "script.js"></script>
   </body>
 </html>
