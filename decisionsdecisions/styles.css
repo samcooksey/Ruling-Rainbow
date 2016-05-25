@@ -1,6 +1,9 @@
 
-div{
-  font-size: 100px;
+html{
+  font-size: 10vw;
+}
+body{
+background-color: #aaaaaa;
 }
 #optionList {
 
@@ -12,19 +15,26 @@ div{
   display: block;
 }
 .title{
-  font-size: 1em;
+  font-size: .75rem;
+  background-color: white;
 }
 .header{
-  border: 1px solid black;
+    font-size: .25rem;
 }
 .header div{
-    font-size: .15em;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
 }
 #selectedOption{
-  box-sizing: border-box;
-  border: 2px solid black;
+  border: 5px solid #aaaaaa;
+  border-top: 10px solid #aaaaaa;
+  border-bottom: 10px solid #aaaaaa;
   padding: 0;
   padding-bottom: 100%;
+  display: none;
+  font-size: .75rem;
+    background-color: white;
 }
 #selectedOption img{
   position: absolute;
@@ -32,11 +42,97 @@ div{
 }
 #answer{
   position: absolute;
+  width: 100%;
+  text-align: center;
+
 }
 .optionSpace{
+  padding: 0;
   padding-bottom: 100%;
 }
 .optionSpace div{
+  width: 100%;
   position: absolute;
-  font-size: .5em;
+  font-size: .25rem;
+  text-align: center;
+  padding-top: .25rem;
+}
+
+.dropDown{
+  font-size: .2rem;
+  display: none;
+  border-bottom: 1px solid black;
+  height: .35rem;
+}
+
+input[type="radio"]{
+  margin: 0 .2em;
+}
+.inline{
+  display: inline-block;
+  margin: 0 .1rem 0 .2rem;
+}
+
+#saveButton{
+  float: right;
+  margin-right: .25rem;
+}
+
+#newSetInput{
+  font-size: .18rem;
+}
+#inputBar{
+  font-size: .25rem;
+  display: none;
+  background-color: black;
+  color: white;
+}
+#inputBar input{
+  color: black;
+}
+#submitOption{
+  font-size: .15rem;
+  margin-bottom: .05rem;
+}
+#submitButton{
+  display: inline-block;
+  margin: 0 .5rem;
+}
+#deleteList{
+  height: .35rem;
+}
+.load{
+  background-color: #3dc7fc;
+}
+.new{
+  background-color: #55ed92;
+}
+.delete{
+  background-color: #ff7f7f;
+}
+#yesNoButton{
+  border-right: 0;
+  background: #ffff3d;
+}
+.weightLabel{
+  font-size: .15rem;
+  font-weight: lighter;
+  display: inline;
+}
+#yesNoBar{
+  width: 100%;
+  text-align: center;
+  background: #ffff3d;
+}
+#getAnswer{
+  display: inline-block;
+  margin-left: .25rem;
+}
+#yesNoQuestion{
+  text-align: center;
+  font-size: .3rem;
+}
+.mainBod{
+  border-left: 5px solid #aaaaaa;
+  border-right: 5px solid #aaaaaa;
 }
