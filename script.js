@@ -184,7 +184,15 @@ function refreshTiles() {
 function removeOption(name) {
 
     options[currentSet].activeWeightCounters.splice(options[currentSet].activeWeightCounters.indexOf(options[currentSet][name].weight[0]), options[currentSet][name].weight.length);
-    var spaceDiv = document.querySelector("." + name);
+    var newName = "";
+    for(var i = 0; i <name.length; i++){
+      if(name[i] === " "){
+        newName+= ".";
+      }else{
+        newName += name[i];
+      }
+    }
+    var spaceDiv = document.querySelector("." + newName);
     clearDiv(spaceDiv);
     delete options[currentSet][name];
     optionCount = Object.keys(options[currentSet]).length - 3;
