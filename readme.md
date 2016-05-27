@@ -16,24 +16,24 @@ Basic layout of the page:
 
 
 creating a new set:
-![new set](Screen Shot 2016-05-27 at 1.00.15 PM.png)
+![new set](images/Screen Shot 2016-05-27 at 1.00.15 PM.png)
 
 
 
 Input field for new Options:
-![input field](Screen Shot 2016-05-27 at 1.00.51 PM.png)
+![input field](images/Screen Shot 2016-05-27 at 1.00.51 PM.png)
 
 
 
 Yes or no input:
-![Yes or No input](Screen Shot 2016-05-27 at 1.03.31 PM.png)
+![Yes or No input](images/Screen Shot 2016-05-27 at 1.03.31 PM.png)
 
 
 
 Adding options:
-![Adding Options](Screen Shot 2016-05-27 at 1.01.09 PM.png)
+![Adding Options](images/Screen Shot 2016-05-27 at 1.01.09 PM.png)
 
 
 
 Rows populate as the page grows:
-![new row](Screen Shot 2016-05-27 at 1.03.05 PM.png)
+![new row](images/Screen Shot 2016-05-27 at 1.03.05 PM.png)
