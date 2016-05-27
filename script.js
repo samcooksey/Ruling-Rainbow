@@ -496,7 +496,13 @@ deleteButton.addEventListener("click", function() {
         deleteBar.style.backgroundColor = deleteColor;
         deleteButton.style.borderBottom = "1px solid " + deleteColor;
     }
-    if (deleteBarLoaded === false) {
+    if (deleteBar.childNodes.length > 1) {
+        var barLength = deleteBar.childNodes.length - 1;
+        for (var i = 0; i < barLength; i++) {
+            deleteBar.removeChild(deleteBar.childNodes[1]);
+        }
+    }
+
         for (var key in localStorage) {
             var deleteSet = document.createElement("div");
             deleteSet.className += " button";
@@ -510,7 +516,7 @@ deleteButton.addEventListener("click", function() {
             deleteBar.appendChild(deleteSet);
             deleteBarLoaded = true;
         }
-    }
+
 });
 
 var yesNoButton = document.querySelector("#yesNoButton");
