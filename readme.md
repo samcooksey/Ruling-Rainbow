@@ -1,5 +1,5 @@
-# Project Name
-Ruling Rainbow
+# Ruling Rainbow
+
 rulingrainbow.samcooksey.com
 
 ## Usage
