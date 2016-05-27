@@ -10,4 +10,30 @@ Options can be removed by clicking the X in the upper right corner. Whole sets m
 If you need to make a simple yes or no decision, select the "Yes or No" tab. Input your question and you will get back an entertaining Yes or No answer. This uses the yesno.wtf API.
 
 ## Images
+Basic layout of the page:
 ![main page](images/Screen Shot 2016-05-27 at 12.59.59 PM.png)
+
+
+
+creating a new set:
+![new set](Screen Shot 2016-05-27 at 1.00.15 PM.png)
+
+
+
+Input field for new Options:
+![input field](Screen Shot 2016-05-27 at 1.00.51 PM.png)
+
+
+
+Yes or no input:
+![Yes or No input](Screen Shot 2016-05-27 at 1.03.31 PM.png)
+
+
+
+Adding options:
+![Adding Options](Screen Shot 2016-05-27 at 1.01.09 PM.png)
+
+
+
+Rows populate as the page grows:
+![new row](Screen Shot 2016-05-27 at 1.03.05 PM.png)
