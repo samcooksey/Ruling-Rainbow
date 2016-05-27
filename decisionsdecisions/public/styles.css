@@ -1,0 +1,154 @@
+html {
+    font-size: 10vw;
+}
+body {
+    background-color: #efefef;
+}
+#rainbow {
+    width: 100vw;
+}
+#optionList {
+    display: inline-block;
+}
+#inputs {
+    display: block;
+}
+.title {
+    font-size: .75rem;
+    background-color: white;
+    font-family: 'Libre Baskerville', serif;
+}
+.header {
+    font-size: .25rem;
+}
+.tab {
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    cursor: default;
+}
+.header div {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+#selectedOption {
+    border: 5px solid #efefef;
+    border-radius: 20px;
+    padding: 0;
+    padding-bottom: calc(100% + 10px);
+    display: none;
+    font-size: .75rem;
+    background-color: white;
+}
+#selectedOption img {
+    display: none;
+    position: absolute;
+    top: .1rem;
+    width: 100%
+}
+@keyframes leapForth {
+    0% {
+        font-size: .01rem;
+        top: 1rem
+    }
+    35% {
+        top: 1.7rem
+    }
+    100% {
+        font-size: .75rem;
+        top: .75rem
+    }
+}
+#answer {
+    width: 100%;
+    text-align: center;
+    animation-duration: 5s;
+}
+.optionSpace {
+    padding: 0;
+    padding-bottom: 100%;
+    border-radius: 12px;
+    border: 5px solid #efefef;
+}
+.optionSpace div {
+    width: 100%;
+    position: absolute;
+    font-size: .25rem;
+    text-align: center;
+    padding-top: .25rem;
+    color: white;
+}
+.dropDown {
+    font-size: .2rem;
+    display: none;
+    border-bottom: 1px solid black;
+    height: .35rem;
+}
+input[type="radio"] {
+    margin: 0 .2em;
+}
+.inline {
+    display: inline-block;
+    margin: 0 .1rem 0 .2rem;
+}
+#saveButton {
+    float: right;
+    margin-right: .25rem;
+}
+#newSetInput {
+    font-size: .18rem;
+}
+#inputBar {
+    font-size: .25rem;
+    display: none;
+    background-color: black;
+    color: white;
+}
+#inputBar input {
+    color: black;
+}
+#submitOption {
+    font-size: .15rem;
+    margin-bottom: .05rem;
+}
+#submitButton {
+    display: inline-block;
+}
+#deleteList {
+    height: .35rem;
+}
+.load {
+    background-color: #aaaaaa;
+}
+.new {
+    background-color: #aaaaaa;
+}
+.delete {
+    background-color: #aaaaaa;
+}
+.yesNo {
+    background-color: #aaaaaa;
+}
+#yesNoButton {
+    border-right: 0;
+}
+.weightLabel {
+    font-size: .2rem;
+    font-weight: lighter;
+    display: inline;
+}
+#yesNoBar {
+    width: 100%;
+    text-align: center;
+}
+#getAnswer {
+    display: inline-block;
+    margin-left: .25rem;
+}
+#yesNoQuestion {
+    text-align: center;
+    font-size: .3rem;
+}
+.button {
+    cursor: pointer;
+}
