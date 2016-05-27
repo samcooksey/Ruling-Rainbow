@@ -10,4 +10,4 @@ Options can be removed by clicking the X in the upper right corner. Whole sets m
 If you need to make a simple yes or no decision, select the "Yes or No" tab. Input your question and you will get back an entertaining Yes or No answer. This uses the yesno.wtf API.
 
 ## Images
-![main page](images/Screen Shot 2016-05-27 at 12.59.59 PM)
+![main page](images/Screen Shot 2016-05-27 at 12.59.59 PM.png)
