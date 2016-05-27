@@ -2,60 +2,89 @@
 html{
   font-size: 10vw;
 }
-body{
-background-color: #aaaaaa;
-}
-#optionList {
 
+body{
+background-color: #efefef;
+}
+
+#rainbow{
+  width: 100vw;
+}
+
+#optionList {
   display: inline-block;
 }
-#result{
-}
+
 #inputs{
   display: block;
 }
+
 .title{
   font-size: .75rem;
   background-color: white;
+  font-family: 'Libre Baskerville', serif;
 }
+
 .header{
     font-size: .25rem;
 }
+
+.tab{
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  cursor: default;
+}
+
 .header div{
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   border-right: 1px solid black;
 }
+
 #selectedOption{
-  border: 5px solid #aaaaaa;
-  border-top: 10px solid #aaaaaa;
-  border-bottom: 10px solid #aaaaaa;
+  border: 5px solid #efefef;
+  border-radius: 20px;
   padding: 0;
-  padding-bottom: 100%;
+  padding-bottom: calc(100% + 10px);
   display: none;
   font-size: .75rem;
-    background-color: white;
+  background-color: white;
 }
+
 #selectedOption img{
+  display: none;
   position: absolute;
+  top: .1rem;
   width: 100%
 }
+
+@keyframes leapForth{
+  0% {font-size: .01rem; top: 1rem}
+  35%{top: 1.7rem}
+  100% {font-size:.75rem; top: .75rem}
+}
+
 #answer{
-  position: absolute;
   width: 100%;
   text-align: center;
+  animation-duration: 5s;
 
 }
+
 .optionSpace{
   padding: 0;
   padding-bottom: 100%;
+  border-radius: 12px;
+  border: 5px solid #efefef;
 }
+
 .optionSpace div{
   width: 100%;
   position: absolute;
   font-size: .25rem;
   text-align: center;
   padding-top: .25rem;
+  color: white;
 }
 
 .dropDown{
@@ -68,6 +97,7 @@ background-color: #aaaaaa;
 input[type="radio"]{
   margin: 0 .2em;
 }
+
 .inline{
   display: inline-block;
   margin: 0 .1rem 0 .2rem;
@@ -81,58 +111,72 @@ input[type="radio"]{
 #newSetInput{
   font-size: .18rem;
 }
+
 #inputBar{
   font-size: .25rem;
   display: none;
   background-color: black;
   color: white;
 }
+
 #inputBar input{
   color: black;
 }
+
 #submitOption{
   font-size: .15rem;
   margin-bottom: .05rem;
 }
+
 #submitButton{
   display: inline-block;
-  margin: 0 .5rem;
 }
+
 #deleteList{
   height: .35rem;
 }
+
 .load{
-  background-color: #3dc7fc;
+  background-color: #aaaaaa;
 }
+
 .new{
-  background-color: #55ed92;
+  background-color: #aaaaaa;
 }
+
 .delete{
-  background-color: #ff7f7f;
+  background-color: #aaaaaa;
 }
+
+.yesNo{
+    background-color: #aaaaaa;
+}
+
 #yesNoButton{
   border-right: 0;
-  background: #ffff3d;
 }
+
 .weightLabel{
-  font-size: .15rem;
+  font-size: .2rem;
   font-weight: lighter;
   display: inline;
 }
+
 #yesNoBar{
   width: 100%;
   text-align: center;
-  background: #ffff3d;
 }
+
 #getAnswer{
   display: inline-block;
   margin-left: .25rem;
 }
+
 #yesNoQuestion{
   text-align: center;
   font-size: .3rem;
 }
-.mainBod{
-  border-left: 5px solid #aaaaaa;
-  border-right: 5px solid #aaaaaa;
+
+.button{
+  cursor: pointer;
 }

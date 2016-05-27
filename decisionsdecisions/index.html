@@ -2,23 +2,24 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Decisions Decisions</title>
+    <title>Ruling Rainbow</title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Libre+Baskerville:400italic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel = "stylesheet" type = "text/css" href = "styles.css"/>
   </head>
   <body>
     <div class = "container-fluid">
       <div class = "row title">
-        <div class = "col-xs-offset-2 col-xs-10 title">Decisions</div>
+        <div class = "col-xs-offset-3 col-xs-9 title" id = "topTitle"><span id = "T0">R</span><span id = "T1">u</span><span id = "T2">l</span><span id = "T3">i</span><span id = "T4">n</span><span id = "T5">g</span></div>
       </div>
       <div class = "row title">
-        <div class = "col-xs-offset-5 col-xs-7 title">Decisions</div>
+        <div class = "col-xs-offset-5 col-xs-7 title" id = "bottomTitle"><span id = "T6">R</span><span id = "T7">a</span><span id = "T8">i</span><span id = "T9">n</span><span id = "T10">b</span><span id = "T11">o</span><span id = "T12">w</span></div>
       </div>
       <div class = "row header">
-        <div class = "col-xs-3 load" id = "load">Load Set</div>
-        <div class = "col-xs-3 new" id = "save">New Set</div>
-        <div class = "col-xs-3 delete" id = "delete">Delete Set</div>
-        <div class = "col-xs-3 yesNo" id = "yesNoButton">Yes or No?</div>
+        <div class = "col-xs-3 load tab" id = "load">Load Set</div>
+        <div class = "col-xs-3 new tab" id = "save">New Set</div>
+        <div class = "col-xs-3 delete tab" id = "delete">Delete Set</div>
+        <div class = "col-xs-3 yesNo tab" id = "yesNoButton">Yes or No?</div>
       </div>
       <div class = "row">
         <div class = "col-xs-12 dropDown load" id = "loadBar">
@@ -27,14 +28,14 @@
       <div class = "row">
         <div class = "col-xs-12 dropDown new" id = "newBar">
         <input type = "text" id = "newSetInput" placeholder = "Set Name"/>
-        <div class = "inline"><p class = "weightLabel">Options lose </p> </div>
+        <div class = "inline"><p class = "weightLabel2">Weight loss after selection:</p> </div>
         <label class = "weightLabel">0%<input type = "radio" name ="weight" value = "0" id = "radio0"/></label>
           <label class = "weightLabel">5%<input type = "radio" name ="weight" value = "20" id = "radio1"/></label>
           <label class = "weightLabel">10%<input type = "radio" name ="weight" value = "10" id = "radio2" checked/></label>
           <label class = "weightLabel">20%<input type = "radio" name ="weight" value = "5" id = "radio3"/></label>
           <label class = "weightLabel">25%<input type = "radio" name ="weight" value = "4" id = "radio4"/></label>
-          <label class = "weightLabel">100%<input type = "radio" name ="weight" value = "1" id = "radio5"/></label><p class = "weightLabel"> selection likelyhood after each selection</p>
-          <div id = "saveButton">SAVE</div>
+          <label class = "weightLabel">100%<input type = "radio" name ="weight" value = "1" id = "radio5"/></label><p class = "weightLabel"></p>
+          <div class = "button" id = "saveButton">SAVE</div>
         </div>
       </div>
       <div class = "row">
@@ -42,17 +43,16 @@
         </div>
       <div class = "row">
         <div class = "col-xs-12 dropDown yesNo" id = "yesNoBar">
-          <input id = "yesNoQuestionInput" type = "text" placeholder = "YES or NO question"><div id = "getAnswer">Ask</div>
+          <input id = "yesNoQuestionInput" type = "text" placeholder = "YES or NO question"><div class = "button" id = "getAnswer">Ask</div>
         </div>
       </div>
       <div class = "row" id = "inputBar">
-        <div class = "col-xs-3" id = "setName"></div>
-        <div class = "col-xs-6">Option: <input id = "submitOption" type = "text"/><div id = "submitButton">Submit</div></div>
-        <div class = "col-xs-3" id = "clearSetButton">Clear Current Set</div>
+        <div class = "col-xs-offset-1 col-xs-3" id = "setName"></div>
+        <div class = "col-xs-5">Option: <input id = "submitOption" type = "text" placeholder = "Option Name"/></div><div class = "col-xs-3 button" id = "submitButton">Submit</div>
 
         </div>
       </div>
-      <div class = "row mainBod" style = "margin-top: .25rem">
+      <div class = "row mainBod">
         <div class ="col-xs-2" id = "column-0">
           <div class = "row">
             <div class = "col-xs-12 optionSpace" id = "space0"></div>
@@ -72,7 +72,7 @@
         <div class ="col-xs-4" id = "column-2and3">
           <div class = "row">
             <div id = "yesNoQuestion"></div>
-            <div class = "col-xs-12" id = "selectedOption"><img id = "answerImg"/><div id = "answer">CLICK ME TO DECIDE!</div></div>
+            <div class = "col-xs-12 button" id = "selectedOption"><img id = "answerImg" alt = "answer image"/><div id = "answer">CLICK ME TO DECIDE!</div></div>
           </div>
         </div>
         <div class ="col-xs-2" id = "column-4">
@@ -92,71 +92,6 @@
           </div>
         </div>
       </div>
-      <div class = "row">
-        <div class = "col-xs-2">
-          <div class = "row">
-            <div class = "col-xs-12 optionSpace" id = "space8"></div>
-          </div>
-        </div>
-        <div class = "col-xs-2">
-          <div class = "row">
-            <div class = "col-xs-12 optionSpace" id = "space9"></div>
-          </div>
-        </div>
-        <div class = "col-xs-2">
-          <div class = "row">
-            <div class = "col-xs-12 optionSpace" id = "space10"></div>
-          </div>
-        </div>
-        <div class = "col-xs-2">
-          <div class = "row">
-            <div class = "col-xs-12 optionSpace" id = "space11"></div>
-          </div>
-        </div>
-        <div class = "col-xs-2">
-          <div class = "row">
-            <div class = "col-xs-12 optionSpace" id = "space12"></div>
-          </div>
-        </div>
-        <div class = "col-xs-2">
-          <div class = "row">
-            <div class = "col-xs-12 optionSpace" id = "space13"></div>
-          </div>
-        </div>
-      </div>
-      <div class = "row">
-        <div class = "col-xs-2">
-          <div class = "row">
-            <div class = "col-xs-12 optionSpace" id = "space14"></div>
-          </div>
-        </div>
-        <div class = "col-xs-2">
-          <div class = "row">
-            <div class = "col-xs-12 optionSpace" id = "space15"></div>
-          </div>
-        </div>
-        <div class = "col-xs-2">
-          <div class = "row">
-            <div class = "col-xs-12 optionSpace" id = "space16"></div>
-          </div>
-        </div>
-        <div class = "col-xs-2">
-          <div class = "row">
-            <div class = "col-xs-12 optionSpace" id = "space17"></div>
-          </div>
-        </div>
-        <div class = "col-xs-2">
-          <div class = "row">
-            <div class = "col-xs-12 optionSpace" id = "space18"></div>
-          </div>
-        </div>
-        <div class = "col-xs-2">
-          <div class = "row">
-            <div class = "col-xs-12 optionSpace" id = "space19"></div>
-          </div>
-        </div>
-      </div>
-
   </div>
     <script type = "text/javascript" src = "script.js"></script>
   </body>
