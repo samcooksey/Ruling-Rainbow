@@ -41,7 +41,6 @@ var answer = document.querySelector("#answer");
 var answerImg = document.querySelector("#answerImg");
 
 function clearBoard() {
-    newSpaceCounter = 0;
     while (document.querySelector(".lowerMainBod")) {
         document.querySelector(".lowerMainBod").parentNode.removeChild(document.querySelector(".lowerMainBod"));
     }
@@ -84,19 +83,21 @@ function clearBoard() {
         document.getElementsByClassName("title")[p].style.backgroundColor = "white";
     }
     if (Object.keys(options[currentSet]).length > 3) {
-        for (var i = 0; i < optionCount; i++) {
+        for (var i = 0; i < 8 + newSpaceCounter; i++) {
             var optionHolder = document.querySelector("#space" + i);
             clearDiv(optionHolder);
-            inputBar.style.display = "none";
         }
+        inputBar.style.display = "none";
     }
+        newSpaceCounter = 0;
 }
 
 
 function clearDiv(div) {
     if (div) {
         div.innerHTML = "";
-        div.style.backgroundColor = borderColor;
+        div.style.backgroundColor = "";
+        div.className = "col-xs-12 optionSpace";
     }
 }
 
@@ -128,7 +129,15 @@ function optionDivSetup(option) {
     option.parentNode.addEventListener("mouseout", function() {
         removeButton.style.display = "none";
     });
-    option.parentNode.className += (" " + option.innerHTML);
+    var newName = "";
+    for(var i = 0; i <option.innerHTML.length; i++){
+      if(option.innerHTML[i] === " "){
+        newName+= " C";
+      }else{
+        newName += option.innerHTML[i];
+      }
+    }
+    option.parentNode.className += (" C" + newName);
     option.parentNode.appendChild(removeButton);
     option.parentNode.style.backgroundColor = backgroundColorPicker(counter);
     counter++;
@@ -187,12 +196,12 @@ function removeOption(name) {
     var newName = "";
     for(var i = 0; i <name.length; i++){
       if(name[i] === " "){
-        newName+= ".";
+        newName+= ".C";
       }else{
         newName += name[i];
       }
     }
-    var spaceDiv = document.querySelector("." + newName);
+    var spaceDiv = document.querySelector(".C" + newName);
     clearDiv(spaceDiv);
     delete options[currentSet][name];
     optionCount = Object.keys(options[currentSet]).length - 3;
@@ -247,12 +256,6 @@ function getAnswer() {
                     }
 
                 }
-                for (var i = 0; i < 8; i++) {
-                    document.querySelector("#space" + i).style.backgroundColor = borderColor;
-                }
-                // for(var k = 0; k< Object.keys(options[currentSet]).length-3; k++){
-                //   document.querySelector("#space" + k).style.backgroundColor = String("rgb(" + (Math.floor(Math.random()*255)) + "," +(Math.floor(Math.random()*255)) + "," + (Math.floor(Math.random()*255)) + ")");
-                // }
 
                 for (var j = 0; j < document.getElementsByClassName("optionSpace").length; j++) {
                     document.querySelector("#space" + j).style.borderColor = borderColor;
@@ -392,7 +395,7 @@ function saveSet() {
         submitOption.focus();
         selectedOptionBox.style.display = "block";
 
-        for (var i = 0; i < 6; i++) {
+        for (var i = 0; i < 7; i++) {
             var radio = document.querySelector("#radio" + i);
             if (radio.checked) {
                 options[currentSet].weightAmnt = radio.value;
