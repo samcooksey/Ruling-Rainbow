@@ -137,6 +137,8 @@ function optionDivSetup(option) {
         newName += option.innerHTML[i];
       }
     }
+    newName = newName.replace(/\'/g, "");
+    console.log(newName);
     option.parentNode.className += (" C" + newName);
     option.parentNode.appendChild(removeButton);
     option.parentNode.style.backgroundColor = backgroundColorPicker(counter);
@@ -197,10 +199,13 @@ function removeOption(name) {
     for(var i = 0; i <name.length; i++){
       if(name[i] === " "){
         newName+= ".C";
+      // }else if(name[i] === "\'"){
+      // newName+= "\'";
       }else{
         newName += name[i];
       }
     }
+    newName = newName.replace(/\'/g, "");
     var spaceDiv = document.querySelector(".C" + newName);
     clearDiv(spaceDiv);
     delete options[currentSet][name];
@@ -255,6 +260,9 @@ function getAnswer() {
                         document.getElementsByClassName("lowerMainBod")[b].style.backgroundColor = borderColor;
                     }
 
+                }
+                for (var i = 0; i < 8; i++) {
+                    document.querySelector("#space" + i).style.backgroundColor = borderColor;
                 }
 
                 for (var j = 0; j < document.getElementsByClassName("optionSpace").length; j++) {
