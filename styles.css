@@ -152,3 +152,11 @@ input[type="radio"] {
 .button {
     cursor: pointer;
 }
+#weightID{
+  display: inline-block;
+}
+#weightInfo{
+  position: absolute;
+  z-index: 2;
+  font-size: .15rem;
+}

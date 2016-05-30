@@ -63,6 +63,7 @@ function clearBoard() {
     newSetButton.style.backgroundColor = newColor;
     deleteButton.style.backgroundColor = deleteColor;
     yesNoButton.style.backgroundColor = yesNoColor;
+    weightInfo.style.backgroundColor = newColor;
     borderColor = "#efefef";
     selectedOptionBox.style.borderColor = borderColor;
     for (var j = 0; j < document.getElementsByClassName("optionSpace").length; j++) {
@@ -251,6 +252,7 @@ function getAnswer() {
                 newSetButton.style.backgroundColor = newColor;
                 deleteButton.style.backgroundColor = deleteColor;
                 yesNoButton.style.backgroundColor = yesNoColor;
+                weightInfo.style.backgroundColor = newColor;
                 borderColor = String("rgb(" + (Math.floor(Math.random() * 255)) + "," + (Math.floor(Math.random() * 255)) + "," + (Math.floor(Math.random() * 255)) + ")");
                 document.querySelector(".mainBod").style.backgroundColor = borderColor;
                 selectedOptionBox.style.backgroundColor = borderColor;
@@ -579,6 +581,7 @@ function submitYesNo() {
         newSetButton.style.backgroundColor = newColor;
         deleteButton.style.backgroundColor = deleteColor;
         yesNoButton.style.backgroundColor = yesNoColor;
+        weightInfo.style.backgroundColor = newColor;
         borderColor = String("rgb(" + (Math.floor(Math.random() * 255)) + "," + (Math.floor(Math.random() * 255)) + "," + (Math.floor(Math.random() * 255)) + ")");
         document.querySelector(".mainBod").style.backgroundColor = borderColor;
         selectedOptionBox.style.backgroundColor = borderColor;
@@ -677,4 +680,14 @@ function backgroundColorPicker(counter) {
 
     }
     return color;
+}
+var weightID = document.querySelector("#weightID");
+var weightInfo = document.querySelector("#weightInfo");
+weightID.addEventListener("mouseenter", weightDropDownIn);
+function weightDropDownIn(){
+  weightInfo.style.display = "block";
+}
+weightID.addEventListener("mouseout", weightDropDownOut);
+function weightDropDownOut(){
+  weightInfo.style.display = "none";
 }
