@@ -7,6 +7,7 @@ var loadColor = "#aaaaaa";
 var deleteColor = "#aaaaaa";
 var yesNoColor = "#aaaaaa";
 var borderColor = "#efefef";
+var trueRandom = false;
 var ajax = function(URL, method) {
     var XHR = new XMLHttpRequest();
     XHR.onreadystatechange = function() {
@@ -151,7 +152,7 @@ function optionDivSetup(option) {
     chosenCounter.style.fontSize = ".1rem";
     option.parentNode.appendChild(chosenCounter);
     var weightPercent = document.createElement("div");
-    weightPercent.innerHTML = "Weight: " + String(((options[currentSet][option.innerHTML].weight.length) / options[currentSet].weightAmnt) * 100) + "%";
+    weightPercent.innerHTML = "Weight: " + String(((options[currentSet][option.innerHTML].weight.length) / options[currentSet].weightAmnt[0]) * 100) + "%";
     weightPercent.style.color = "black";
     weightPercent.style.bottom = ".1rem";
     weightPercent.style.fontSize = ".1rem";
@@ -187,7 +188,7 @@ function refreshTiles() {
             var weightCounter = containingDiv.childNodes[3];
             counter.innerHTML = "Hits: " + options[currentSet][optionName.innerHTML].chosenCount;
             counter.style.color = "black";
-            weightCounter.innerHTML = "Weight: " + String(((options[currentSet][optionName.innerHTML].weight.length) / options[currentSet].weightAmnt) * 100) + "%";
+            weightCounter.innerHTML = "Weight: " + String(((options[currentSet][optionName.innerHTML].weight.length) / options[currentSet].weightAmnt[0]) * 100) + "%";
             weightCounter.style.color = "black";
         }
     }
@@ -301,7 +302,7 @@ function getAnswer() {
             }, 5000);
             setTimeout(function() {
                 answer.style.animationName = "";
-                if (options[currentSet].weightAmnt === "1") {
+                if (options[currentSet].weightAmnt[0] === "1" && options[currentSet].weightAmnt[1] === false) {
                     removeOption(chosenOption);
                 }
                 saveState();
@@ -310,6 +311,7 @@ function getAnswer() {
             }, 10000);
         });
     }
+    console.log(trueRandom);
 }
 var submit = function() {
     if (submitOption.value !== "") {
@@ -319,7 +321,7 @@ var submit = function() {
         optionCount = Object.keys(options[currentSet]).length - 3;
         options[currentSet][submitOption.value].weight = [];
         options[currentSet][submitOption.value].chosenCount = 0;
-        for (var i = 0; i < options[currentSet].weightAmnt; i++) {
+        for (var i = 0; i < options[currentSet].weightAmnt[0]; i++) {
             options[currentSet][submitOption.value].weight[i] = options[currentSet].weightCounter;
             options[currentSet].activeWeightCounters.push(options[currentSet].weightCounter);
             options[currentSet].weightCounter++;
@@ -405,6 +407,7 @@ function saveSet() {
         currentSet = newSetInput.value;
         newSetInput.value = "";
         options[currentSet] = {};
+        options[currentSet].weightAmnt = [];
         setNameDiv.innerHTML = currentSet;
         newBar.style.display = "none";
         newSetButton.style.borderBottom = "1px solid black";
@@ -415,7 +418,12 @@ function saveSet() {
         for (var i = 0; i < 7; i++) {
             var radio = document.querySelector("#radio" + i);
             if (radio.checked) {
-                options[currentSet].weightAmnt = radio.value;
+                options[currentSet].weightAmnt[0] = radio.value;
+                if (radio.id ==="radio0"){
+                  options[currentSet].weightAmnt[1] = true;
+                }else{
+                   options[currentSet].weightAmnt[1]= false;
+                }
             }
         }
         options[currentSet].activeWeightCounters = [];
