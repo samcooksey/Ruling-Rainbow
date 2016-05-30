@@ -82,7 +82,7 @@ body {
     font-size: .2rem;
     display: none;
     border-bottom: 1px solid black;
-    height: .35rem;
+    /*height: .35rem;*/
 }
 input[type="radio"] {
     margin: 0 .2em;
@@ -114,9 +114,9 @@ input[type="radio"] {
 #submitButton {
     display: inline-block;
 }
-#deleteList {
+/*#deleteList {
     height: .35rem;
-}
+}*/
 .load {
     background-color: #aaaaaa;
 }
