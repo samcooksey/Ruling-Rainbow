@@ -389,6 +389,13 @@ newSetInput.addEventListener("keyup", function() {
         saveSet();
     }
 });
+for (var x = 0; x<7; x++){
+  document.querySelector("#radio" + x).addEventListener("keyup", function() {
+      if (event.which === 13) {
+          saveSet();
+      }
+  });
+}
 
 function saveSet() {
     if (newSetInput.value === "") {

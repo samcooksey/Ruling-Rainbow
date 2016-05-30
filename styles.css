@@ -96,7 +96,7 @@ input[type="radio"] {
     margin-right: .25rem;
 }
 #newSetInput {
-    font-size: .18rem;
+    /*font-size: .18rem;*/
 }
 #inputBar {
     font-size: .25rem;
@@ -153,7 +153,7 @@ input[type="radio"] {
     cursor: pointer;
 }
 #weightID{
-  display: inline-block;
+  margin: 0;
 }
 #weightInfo{
   position: absolute;
