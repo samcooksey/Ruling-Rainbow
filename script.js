@@ -465,6 +465,9 @@ loadButton.addEventListener("click", function() {
     }
 
     for (var key in localStorage) {
+      if(localStorage.hasOwnProperty(key)){
+
+
         var savedSet = document.createElement("div");
         savedSet.innerHTML = key;
         savedSet.style.display = "inline-block";
@@ -494,6 +497,7 @@ loadButton.addEventListener("click", function() {
 
         });
         loadBar.appendChild(savedSet);
+      }
     }
 
 
@@ -636,7 +640,7 @@ function submitYesNo() {
     selectedOptionBox.style.backgroundColor = "#efefef";
     var music = new Audio('Price1.mp3');
     music.play();
-    ajax("http://yesno.wtf//api", function(data) {
+    ajax("https://yesno.wtf//api", function(data) {
         setTimeout(function() {
             answerImg.style.display = "block";
             answerImg.src = JSON.parse(data).image;
